@@ -1,12 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../public/logo.jpeg';
+import logo from '../src/assets/logo.jpeg';
+
 
 const LoginPage = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    // you can add validation later
     navigate('/verify');
   };
 

@@ -1,7 +1,14 @@
-// src/VerificationPage.jsx
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const VerificationPage = () => {
+  const navigate = useNavigate();
+
+  const handleVerify = () => {
+    // Here you can also add OTP verification logic
+    navigate('/Dashboard'); // redirect to dashboard
+  };
+
   return (
     <div className="min-h-screen flex">
       {/* Left Panel */}
@@ -14,8 +21,6 @@ const VerificationPage = () => {
           All your accounts, cards, savings, and investments in one place.
         </p>
       </div>
-
-      {/* Right Panel */}
       <div className="w-1/2 flex items-center justify-center bg-white">
         <div className="w-full max-w-md px-6 text-center">
           <h1 className="text-2xl font-bold text-[#1C1C23] mb-4">
@@ -29,13 +34,20 @@ const VerificationPage = () => {
           </p>
 
           <div className="flex justify-center space-x-2 mb-4">
-            <input type="text" maxLength="1" className="w-12 h-12 border text-center text-xl border-gray-300 rounded" />
-            <input type="text" maxLength="1" className="w-12 h-12 border text-center text-xl border-gray-300 rounded" />
-            <input type="text" maxLength="1" className="w-12 h-12 border text-center text-xl border-gray-300 rounded" />
-            <input type="text" maxLength="1" className="w-12 h-12 border text-center text-xl border-gray-300 rounded" />
+            {[...Array(4)].map((_, i) => (
+              <input
+                key={i}
+                type="text"
+                maxLength="1"
+                className="w-12 h-12 border text-center text-xl border-gray-300 rounded"
+              />
+            ))}
           </div>
 
-          <button className="w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition mb-2">
+          <button
+            onClick={handleVerify}
+            className="w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition mb-2"
+          >
             Verify
           </button>
 
