@@ -5,8 +5,8 @@ const VerificationPage = () => {
   const navigate = useNavigate();
 
   const handleVerify = () => {
-    // Here you can also add OTP verification logic
-    navigate('/Dashboard'); // redirect to dashboard
+
+    navigate('/Dashboard'); 
   };
 
   return (
