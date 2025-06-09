@@ -2,7 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginPage from '../Component/login';
 import VerificationPage from '../Component/VerificationPage';
-import DashboardPage from '../Component/Dashboard';
+import NavbarPage from '../Component/Navbar';
+import Dashboard from '../Component/Dashboard';
+import Settings from '../Component/Settings';
 
 function App() {
   return (
@@ -10,15 +12,13 @@ function App() {
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/verify" element={<VerificationPage />} />
-        {/* <Route path="/" element={<VerificationPage />} /> */}
-        <Route path="/Dashboard" element={<DashboardPage />} />
+        <Route path="/dashboard" element={<NavbarPage />}>
+          <Route index element={<Dashboard />} />
+          <Route path="settings" element={<Settings />} />
+        </Route>
       </Routes>
     </Router>
   );
 }
 
 export default App;
-
-
-
-
