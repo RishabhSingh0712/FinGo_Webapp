@@ -5,6 +5,7 @@ import VerificationPage from '../Component/VerificationPage';
 import NavbarPage from '../Component/Navbar';
 import Dashboard from '../Component/Dashboard';
 import Settings from '../Component/Settings';
+import TransferPage from '../Component/TransferPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/dashboard" element={<NavbarPage />}>
           <Route index element={<Dashboard />} />
           <Route path="settings" element={<Settings />} />
+          <Route path="TransferPage" element={<TransferPage />} />
         </Route>
       </Routes>
     </Router>

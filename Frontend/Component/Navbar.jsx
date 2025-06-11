@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Settings from "./Settings"; 
 import Dashboard from "./Dashboard"; 
+import TransferPage from "./TransferPage";
 
 const Sidebar = ({ onSelect }) => {
   return (
@@ -11,7 +12,7 @@ const Sidebar = ({ onSelect }) => {
           <div onClick={() => onSelect("Dashboard")} className="hover:text-black text-gray-600 cursor-pointer flex items-center gap-2">
             🏠 Dashboard
           </div>
-          <div onClick={() => onSelect("transfer")} className="hover:text-black text-gray-600 cursor-pointer flex items-center gap-2">
+          <div onClick={() => onSelect("TransferPage")} className="hover:text-black text-gray-600 cursor-pointer flex items-center gap-2">
             ↩️ Transfer
           </div>
           <div onClick={() => onSelect("transaction")} className="hover:text-black text-gray-600 cursor-pointer flex items-center gap-2">
@@ -53,6 +54,7 @@ export default function AccountLayout() {
       <main className="flex-1 overflow-y-auto bg-white">
         {selected === "Dashboard" && <Dashboard />}
         {selected === "settings" && <Settings />}
+        {selected === "TransferPage" && <TransferPage />}
       </main>
     </div>
   );
