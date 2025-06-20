@@ -27,7 +27,7 @@ const TransferPage = () => {
             <p className="text-sm">IBAN</p>
             <p className="font-mono text-sm">AB11 0000 0000 1111 1111</p>
             <p className="mt-2 text-sm">Account owner</p>
-            <p className="font-semibold text-white">Nicola Rich</p>
+            <p className="font-semibold text-white">Rishabh Singh</p>
           </div>
 
           {/* Share and Request Buttons */}
