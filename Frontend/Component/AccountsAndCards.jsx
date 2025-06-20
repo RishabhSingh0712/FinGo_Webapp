@@ -151,6 +151,4 @@ export function CardDetails() {
     </div>
   );
 }
-
-
 export default AccountsAndCards;
